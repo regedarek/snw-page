@@ -489,6 +489,9 @@ footer {
 footer h3 {
   margin-top: 0px;
 }
+.invert-color {
+  color: #333;
+}
 .social-btn {
   display: inline-block;
   padding: .5rem 1rem;
