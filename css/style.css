@@ -278,6 +278,7 @@ header {
 .host-words {
   margin-top: 3rem;
   font-size: 18px;
+  text-align: justify;
 }
 .schedule {
   padding: 0;
