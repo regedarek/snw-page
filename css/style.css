@@ -489,9 +489,12 @@ footer {
 footer h3 {
   margin-top: 0px;
 }
-.invert-color {
+.btn-default-invert {
   color: #333;
+  border-color: #333;
+  background: #fff;
 }
+
 .social-btn {
   display: inline-block;
   padding: .5rem 1rem;

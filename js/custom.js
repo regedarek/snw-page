@@ -1,43 +1,8 @@
 (function() {
 	/*****************************
-	* Initialize Countdown
-	*****************************/
-	$('#countdown').countDown({
-		targetDate: {
-			'day': 		parseInt($('#countdown').data('day')),
-			'month': 	parseInt($('#countdown').data('month')),
-			'year': 	parseInt($('#countdown').data('year')),
-			'hour': 	0,
-			'min': 		0,
-			'sec': 		0
-		},
-		omitWeeks: true
-	});
-	/*****************************
 	* Initialize Wow - elements animation on scroll
 	*****************************/
 	new WOW({mobile: false}).init();
-	/*****************************
-	* Initialize GoogleMap
-	*****************************/
-	function initializeGoogleMap() {
-		var mapCanvas = document.getElementById('map');
-		var mapCenter = new google.maps.LatLng($('.event-map').data('latitude'), $('.event-map').data('longitude'))
-		var mapOptions = {
-		  center: mapCenter,
-		  zoom: 14,
-		   styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}],
-		  mapTypeId: google.maps.MapTypeId.ROADMAP
-		}
-		var map = new google.maps.Map(mapCanvas, mapOptions);
-
-		var marker = new google.maps.Marker({
-	      position: mapCenter,
-	      map: map
-	  	});
-	}
-	google.maps.event.addDomListener(window, 'load', initializeGoogleMap);
-
 	/*****************************
 	* Smooth scroll
 	*****************************/
@@ -56,5 +21,15 @@
 	  e.preventDefault()
 	  $(this).tab('show')
 	});
+	/****************************/
+	/*****************************
+	* Instructors
+	*****************************/
+	$('.js-instructors-more').hide();
+  $('.js-instructors-button').click(function (e) {
+	  e.preventDefault()
+	  $('.js-instructors-button').hide();
+	  $('.js-instructors-more').show();
+  });
 	/****************************/
 })();
