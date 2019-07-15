@@ -238,6 +238,14 @@ header {
   border: 2px solid #fff;
   padding: 6px 15px;
 }
+
+.event-details-link {
+  background: white;
+  display: inline-block;
+  margin-top: 30px;
+  border: 2px solid #fff;
+  padding: 6px 15px;
+}
 #countdown {
   position: relative;
   margin-top: 100px;
